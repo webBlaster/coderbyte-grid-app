@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "shape": "oval",
+    "color": "red"
+  },
+  {
+    "id": "2",
+    "shape": "round",
+    "color": "blue"
+  },
+  {
+    "id": "3",
+    "shape": "triangle",
+    "color": "green"
+  },
+  {
+    "id": "4",
+    "shape": "square",
+    "color": "yellow"
+  },
+  {
+    "id": "5",
+    "shape": "rectangle",
+    "color": "grey"
+  },
+  {
+    "id": "6",
+    "shape": "oval",
+    "color": "ash"
+  },
+  {
+    "id": "7",
+    "shape": "oval",
+    "color": "blue"
+  },
+  {
+    "id": "8",
+    "shape": "oval",
+    "color": "blue"
+  },
+  {
+    "id": "9",
+    "shape": "oval",
+    "color": "blue"
+  },
+  {
+    "id": "10",
+    "shape": "oval",
+    "color": "blue"
+  }
+]
