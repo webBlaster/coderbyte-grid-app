@@ -6,8 +6,8 @@ function App() {
   const [map, setMap] = useState({ shape: new Map(), color: new Map() });
 
   //property arrays
-  let shapes = ["round", "rectangle", "triangle", "oval", "square"];
-  let colors = ["red", "blue", "green", "yellow", "grey", "ash"];
+  const shapes = ["round", "rectangle", "triangle", "oval", "square"];
+  const colors = ["red", "blue", "green", "yellow", "grey", "ash"];
 
   useEffect(() => {
     let currentMap = map;
@@ -20,6 +20,7 @@ function App() {
       currentMap.shape.set(item, true);
     });
     setMap(currentMap);
+    // eslint-disable-next-line
   }, []);
 
   const filterData = (): void => {
@@ -53,12 +54,12 @@ function App() {
   };
 
   const shapeFilters = shapes.map((item) => (
-    <button name={item} onClick={toggleShape}>
+    <button name={item} key={item} onClick={toggleShape}>
       {item}
     </button>
   ));
   const colorFilters = colors.map((item) => (
-    <button name={item} onClick={toggleColor}>
+    <button name={item} key={item} onClick={toggleColor}>
       {item}
     </button>
   ));
