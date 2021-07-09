@@ -10,14 +10,16 @@ function App() {
   let colors = ["red", "blue", "green", "yellow", "grey", "ash"];
 
   useEffect(() => {
+    let currentMap = map;
     //set default map values
     colors.forEach((item) => {
-      map.color.set(item, true);
+      currentMap.color.set(item, true);
     });
 
     shapes.forEach((item) => {
-      map.shape.set(item, true);
+      currentMap.shape.set(item, true);
     });
+    setMap(currentMap);
   }, []);
 
   const filterData = (): void => {
@@ -27,7 +29,7 @@ function App() {
     setShapeData(filteredData);
   };
 
-  const toggleShape = (event: any) => {
+  const toggleShape = (event: any): void => {
     event.preventDefault();
     let currentMap = map;
     currentMap.shape.set(
@@ -39,7 +41,7 @@ function App() {
     console.log(map.shape, shapeData);
   };
 
-  const toggleColor = (event: any) => {
+  const toggleColor = (event: any): void => {
     event.preventDefault();
     let currentMap = map;
     currentMap.color.set(
