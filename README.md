@@ -1,8 +1,10 @@
 # Grid App
 
 Login with hard coded details
-username is (admin)
-password is (password)
+
+### `username is (admin)`
+
+### `password is (password)`
 
 ## Available Scripts
 
