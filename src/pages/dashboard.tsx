@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import data from "../data.json";
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   const [shapeData, setShapeData] = useState(data);
   const [map, setMap] = useState({ shape: new Map(), color: new Map() });
 
   //property arrays
-  const shapes = ["round", "rectangle", "triangle", "oval", "square"];
-  const colors = ["red", "blue", "green", "yellow", "grey", "ash"];
+  const shapes: string[] = ["round", "rectangle", "triangle", "oval", "square"];
+  const colors: string[] = ["red", "blue", "green", "yellow", "grey", "ash"];
 
   useEffect(() => {
     let currentMap = map;

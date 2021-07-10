@@ -9,7 +9,10 @@ import App from "./app";
 import rootReducer from "./reducers/root";
 import reportWebVitals from "./reportWebVitals";
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer /* preloadedState, */,
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <React.StrictMode>
