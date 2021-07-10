@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Grid App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Login with hard coded details
+username is (admin)
+password is (password)
 
 ## Available Scripts
 
