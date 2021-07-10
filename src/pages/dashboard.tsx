@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Header from "../components/header";
 import data from "../data.json";
 
 const Dashboard: React.FC = () => {
@@ -73,6 +74,7 @@ const Dashboard: React.FC = () => {
   });
   return (
     <>
+      <Header />
       <h1>Filters</h1>
       <div className="filters">
         <h4>Shapes</h4>
