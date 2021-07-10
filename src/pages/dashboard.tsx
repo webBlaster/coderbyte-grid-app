@@ -26,6 +26,7 @@ const Dashboard: React.FC = () => {
     // eslint-disable-next-line
   }, []);
 
+  //filter data based on filters
   const filterData = (): void => {
     let filteredData = data.filter((item) => {
       return map.shape.get(item.shape) && map.color.get(item.color);
@@ -60,12 +61,12 @@ const Dashboard: React.FC = () => {
     <>
       <Header />
       <Filters
+        map={map}
         colors={colors}
         shapes={shapes}
         toggleColor={toggleColor}
         toggleShape={toggleShape}
       />
-      <h1>Items</h1>
       <ShapeList shapeData={shapeData} />
     </>
   );
