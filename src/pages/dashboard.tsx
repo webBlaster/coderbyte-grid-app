@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/header";
+import Filters from "../components/filters";
 import data from "../data.json";
+import ShapeList from "../components/shapelist";
 
 const Dashboard: React.FC = () => {
   const [shapeData, setShapeData] = useState(data);
@@ -31,6 +33,7 @@ const Dashboard: React.FC = () => {
     setShapeData(filteredData);
   };
 
+  //select and deselect shapes
   const toggleShape = (event: any): void => {
     event.preventDefault();
     let currentMap = map;
@@ -40,9 +43,9 @@ const Dashboard: React.FC = () => {
     );
     setMap(currentMap);
     filterData();
-    console.log(map.shape, shapeData);
   };
 
+  //select and deselect colors
   const toggleColor = (event: any): void => {
     event.preventDefault();
     let currentMap = map;
@@ -51,40 +54,19 @@ const Dashboard: React.FC = () => {
       !currentMap.color.get(event.target.name)
     );
     filterData();
-    console.log(map.color);
   };
 
-  const shapeFilters = shapes.map((item) => (
-    <button name={item} key={item} onClick={toggleShape}>
-      {item}
-    </button>
-  ));
-  const colorFilters = colors.map((item) => (
-    <button name={item} key={item} onClick={toggleColor}>
-      {item}
-    </button>
-  ));
-
-  let shapeList = shapeData.map((item) => {
-    return (
-      <li key={item.id}>
-        {item.shape} and {item.color}{" "}
-      </li>
-    );
-  });
   return (
     <>
       <Header />
-      <h1>Filters</h1>
-      <div className="filters">
-        <h4>Shapes</h4>
-        {shapeFilters}
-        <hr />
-        <h4>Colors</h4>
-        {colorFilters}
-      </div>
+      <Filters
+        colors={colors}
+        shapes={shapes}
+        toggleColor={toggleColor}
+        toggleShape={toggleShape}
+      />
       <h1>Items</h1>
-      <ul className="grid">{shapeList}</ul>
+      <ShapeList shapeData={shapeData} />
     </>
   );
 };
