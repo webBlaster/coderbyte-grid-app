@@ -1,5 +1,7 @@
 # Grid App
 
+# Login Details
+
 Login with hard coded details
 
 ### `username is (admin)`
