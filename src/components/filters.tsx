@@ -44,6 +44,7 @@ const Filters = ({ map, colors, shapes, toggleShape, toggleColor }: any) => {
 
   const colorFilters = colors.map((item: string) => (
     <ColorButton
+      title={item}
       name={item}
       color={map.color.get(`${item}`)}
       key={item}

@@ -7,7 +7,8 @@ const mockStore = configureStore([]);
 
 describe("check if components render without crashing", () => {
   const store = mockStore({ auth: { isAuthenticated: true } });
-  it("check if app renders", () => {
+
+  it("check if <App/> renders", () => {
     render(
       <Provider store={store}>
         <App />
